@@ -16,6 +16,11 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  box-sizing: border-box;
+  height: 800px;
+  width: 1200px;
+  padding-top: 133px;
+  padding-left: 30px;
 }
 
 h1,
@@ -35,4 +40,293 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/*общий контейнер */
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 534px;
+  width: 1140px;
+  gap: 30px;
+  /*border: 1px solid #FFF;*/
+}
+
+/*------------------------------------------------левый контейнер */
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 534px;
+  width: 711px;
+  /*border: 1px solid #f50a0a;*/
+}
+
+/*контейнер для выбранного видео*/
+.result__video-container {
+  position: relative;
+  display: flex;
+  height: auto;
+  width: 100%;
+  margin-bottom: 16px;
+  /*border: 2px solid #fff;*/
+}
+
+/*выбранное видео*/
+.result__video {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*контейнер для ввода данных*/
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  height: 54px;
+  width: 711px;
+  /*border: 1px solid white;*/
+ 
+}
+
+/*контейнер для выбора города и времени суток*/
+.search-form__fieldset {
+  display: flex;
+  height: 54px;
+  width: 258px;
+  flex-direction: column;
+  border: none;
+  margin-left: 3px;
+}
+
+/*стилизация надписи город и время суток */
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*контейнер поля ввода города - невидимо */
+.search-form__label {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 225px;
+  margin-top: 8px;
+  justify-content: start;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* обертка чекбокса*/
+.search-form__checkbox-list {
+  display: flex;
+  height: 28px;
+  width: 210px;
+  gap: 16px;
+  /*border: 1px solid white;*/
+}
+
+/* новый чекбокс */
+.search-form__pseudo-checkbox {
+  display: flex;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fcf9f9;
+}
+/*стилизация надписей чекбокса*/
+.search-form__label-text {
+  margin-left: 3px;
+}
+
+/* стилизация поля ввода города */
+.search-form__textfield {
+  background-color: transparent;
+  height: 22px;
+  width: 226px;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  appearance: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+/*----*/
+.search-form__textfield:focus,
+.search-form__textfield:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+/*----*/
+.search-form__textfield:active {
+  border: 1px solid #fff;
+  outline: none;
+}
+
+/*стилизация кнопки*/
+.search-form__submit-button {
+  display: flex;
+  height: 34px;
+  width: 194px;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+}
+
+/*----------------------------------------правый контейнер------------------- */
+.content__details {
+  display: flex;
+  height: 534px;
+  width: 399px;
+  flex-direction: column;
+}
+/*стилизация заголовка страницы*/
+.title {
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+/*стилизация первого слога заголовка*/
+.content__accent {
+  color: #545050;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%; /* 70.5px */
+  text-transform: uppercase;
+}
+
+/*контейнер каталога с видео*/
+.content__list {
+  position: relative;
+  display: flex;
+  height: 298px;
+  width: 399px;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/*----*/
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+/*контейнер для карточек*/
+.content__list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  height: 107px;
+  width: 394px;
+  /*border: 1px solid;*/
+}
+
+/*Стилизация ссылок*/
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*Стилизация ссылок карточек с видео*/
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+/*Контейнер для ссылок и наименования  города в карточке*/
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: 103px;
+  width: 200px;
+  gap: 6px;
+}
+
+/*Стилизация Наименования города в карточке*/
+.content__video-card-title {
+  display: flex;
+  height: 30px;
+  width: 200px;
+  font-family: Oswald;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 30px */
+  text-transform: uppercase;
+}
+
+/*Стилизация описания города в карточке*/
+.content__video-card-description {
+  display: flex;
+  flex-direction: row;
+  height: 65px;
+  width: 200px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.2px; /* 90% */
+}
+
+/* Форматирование видео в карточке*/
+.content__video-card-thumbnail {
+  display: flex;
+  height: 103px;
+  width: 194px;
+  /*border: 1px solid #fff;*/
+  object-fit: cover;
+  object-position: center;
+}
+/* Кнопка показать еще */
+.more-button {
+  display: flex;
+  height: 34px;
+  width: 194px;
+  flex-direction: column;
+  justify-content: center;
+   margin-top: 20px;
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
 }
