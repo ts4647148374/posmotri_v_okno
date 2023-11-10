@@ -17,10 +17,10 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   box-sizing: border-box;
-  height: 800px;
+  /*height: 800px;*/
   width: 1200px;
-  padding-top: 133px;
-  padding-left: 30px;
+  padding-top: 140px;
+  /*padding-left: 30px;*/
 }
 
 h1,
@@ -58,8 +58,10 @@ ol {
   flex-direction: row;
   height: 534px;
   width: 1140px;
+  margin-top: 133px;
+  margin-left: 30px;
   gap: 30px;
-  /*border: 1px solid #FFF;*/
+  border: 1px solid #FFF;
 }
 
 /*------------------------------------------------левый контейнер */
