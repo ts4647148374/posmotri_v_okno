@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -18,7 +19,9 @@ html {
   background-color: #1b1919;
   box-sizing: border-box;
   width: 1200px;
+  
   padding-top: 140px;
+  /*border: 1px solid red;*/
 }
 
 h1,
@@ -50,78 +53,85 @@ ol {
   white-space: nowrap;
 }
 
-/*общий контейнер */
-.content {
+.content {/*----------общий контейнер */
   display: flex;
   flex-direction: row;
-  height: 534px;
+  /*height: 534px;*/ /* при удалении данного свойства высота блока становится равна высоте страницы*/ 
   width: 1140px;
   margin-top: 133px;
   margin-left: 30px;
   gap: 30px;
+  /*border: 1px solid #FFB02E;*/
   
 }
 
-/*------------------------------------------------левый контейнер */
+/*------------------------------------------------------------левый контейнер */
 .result {
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  height: 534px;
+  justify-content: start;
+  /*height: 534px;исправлено*/ 
   width: 711px;
- 
+  margin-top: 72px;
+  /*border: 1px solid #FFB02E;*/
 }
 
-/*контейнер для выбранного видео*/
-.result__video-container {
+
+.result__video-container {/*контейнер для выбранного видео*/
   position: relative;
   display: flex;
-  height:386px;
+  height: 386px;
   width: 100%;
   margin-bottom: 16px;
+  /*border: 1px solid white;*/
  }
 
-/*выбранное видео*/
-.result__video {
+
+.result__video { /*----------выбранное видео*/
   display: flex;
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: center;
+  /*border: 1px solid white;*/
 }
 
-/*контейнер для ввода данных*/
-.search-form {
+
+.search-form {/*----------контейнер для ввода данных*/
   display: flex;
   flex-direction: row;
   justify-content: start;
-  height: 54px;
+  margin-top: 5px;
+  /*height: 54px; исправлено*/
   width: 711px;
+  /*border: 1px solid white;*/
 }
 
-/*контейнер для выбора города и времени суток*/
-.search-form__fieldset {
+
+.search-form__fieldset {/*контейнер для выбора города и времени суток*/
   display: flex;
-  height: 54px;
+ /* height: 54px; исправлено*/
   width: 258px;
   flex-direction: column;
   border: none;
   margin-left: 3px;
+  /*border: 1px solid white;*/
 }
 
-/*стилизация надписи город и время суток */
-.search-form__fieldset-title {
+
+.search-form__fieldset-title {/*стилизация надписи город и время суток */
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  /*border: 1px solid white;*/
 }
 
-/*контейнер поля ввода города - невидимо */
-.search-form__label {
+
+.search-form__label {/*контейнер поля ввода города - невидимо */
   display: flex;
   flex-direction: row;
-  height: 20px;
+  /*height: 20px;исправлено*/
   width: 225px;
   margin-top: 8px;
   justify-content: start;
@@ -132,16 +142,16 @@ ol {
   line-height: normal;
 }
 
-/* обертка чекбокса*/
-.search-form__checkbox-list {
+
+.search-form__checkbox-list {/* обертка чекбокса*/
   display: flex;
-  height: 28px;
+  /*height: 28px;исправлено*/
   width: 210px;
   gap: 16px;
 }
 
-/* новый чекбокс */
-.search-form__pseudo-checkbox {
+
+.search-form__pseudo-checkbox { /* новый чекбокс */
   display: flex;
   /*position: relative;*/
   justify-content: center;
@@ -151,13 +161,13 @@ ol {
   border: 1px solid #fff;
 }
 
-/*стилизация надписей чекбокса*/
-.search-form__label-text {
+
+.search-form__label-text {/*стилизация надписей чекбокса*/
   margin-left: 3px;
 }
 
-/* стилизация поля ввода города */
-.search-form__textfield {
+
+.search-form__textfield {/* стилизация поля ввода города */
   background-color: transparent;
   height: 22px;
   width: 226px;
@@ -174,8 +184,8 @@ ol {
   border-bottom: 1px solid #fff;
 }
 
-/*общая стилизация кнопок*/
-.button {
+
+.button {/*----------общая стилизация кнопок*/
   cursor: pointer;
   color: #fff;
   text-align: center;
@@ -186,12 +196,13 @@ ol {
   line-height: normal;
   background-color: transparent;
   border: 1px solid #fff;
+  height: 34px;
   }
   
-/*стилизация кнопки поиска*/
-.search-form__submit-button {
+
+.search-form__submit-button {/*стилизация кнопки поиска*/
   display: flex;
-  height: 34px;
+  min-height: 34px; /* исправлено*/
   width: 194px;
   flex-direction: column;
   justify-content: center;
@@ -205,21 +216,23 @@ ol {
   height: 534px;
   width: 399px;
   flex-direction: column;
+  /*border: 1px solid red;*/
 }
 
-/*стилизация заголовка страницы*/
-.title {
+
+.title {/*----------стилизация заголовка страницы*/
   font-family: Oswald;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
-  margin-bottom: 26px;
+  margin-bottom: 23px;
+  /*border: 1px solid red;*/
 }
 
-/*стилизация первого слога заголовка*/
-.content__accent {
+
+.content__accent {/*стилизация первого слога заголовка*/
   color: #545050;
   font-family: Oswald;
   font-size: 75px;
@@ -229,65 +242,70 @@ ol {
   text-transform: uppercase;
 }
 
-/*контейнер каталога с видео*/
-.content__list {
+
+.content__list {/*----------контейнер каталога с видео*/
   position: relative;
   display: flex;
   height: 298px;
   width: 399px;
   flex-direction: column;
   overflow-x: hidden;
+  /*border: 1px solid red;*/
 }
 
-/*-отсупы между видеокарточками за исключением последней---*/
-.content__list-item:not(:last-child) {
+
+.content__list-item:not(:last-child) {/*-отсупы между видеокарточками за исключением последней---*/
   margin-bottom: 30px;
 }
 
-/*контейнер для карточек*/
-.content__list-item {
+
+.content__list-item {/*----------контейнер для карточек*/
   display: flex;
   flex-direction: row;
   justify-content: start;
-  height: 107px;
+  height: 107px; /* нельзя убрать свойство - высота 107px больше нигде не задана , если убрать высота блока становится 103 px по размеру видеокарточки*/
   width: 394px;
   /*border: 1px solid;*/
+  /*border: 1px solid red;*/
 }
 
-/*Стилизация ссылок*/
-.content__card-link {
+
+.content__card-link {/*----------Стилизация ссылок*/
   display:block;
   text-decoration: none;
-  height: 107px;
+  /*height: 107px;исправлено*/
   color: #fff;
   margin-top: 2px;
   margin-right: 2px;
   margin-bottom: 2px;
   margin-left: 2px;
+  /*border: 1px solid red;*/
 }
 
-/*Стилизация ссылок карточек с видео*/
-.content__video-card {
+
+.content__video-card {/*Стилизация ссылок карточек с видео*/
   display: flex;
-  height: 107px;
+  /*height: 107px;*/
   flex-direction: row;
   align-items: center;
+  /*border: 1px solid red;*/
 }
 
-/*Контейнер для ссылок и наименования  города в карточке*/
-.content__video-card-description-container {
+
+.content__video-card-description-container {/*Контейнер для ссылок и наименования  города в карточке*/
   display: flex;
   flex-direction: column;
   align-items: start;
   height: 103px;
   width: 200px;
-  gap: 6px;
+  /*gap: 6px;*/
+  /*border: 1px solid red;*/
 }
 
-/*Стилизация Наименования города в карточке*/
-.content__video-card-title {
+
+.content__video-card-title {/*Стилизация Наименования города в карточке*/
   display: flex;
-  height: 30px;
+  /*height: 30px;исправлено*/
   max-width: 200px;
   font-family: Oswald;
   font-size: 30px;
@@ -295,15 +313,16 @@ ol {
   font-weight: 700;
   line-height: 100%; /* 30px */
   text-transform: uppercase;
-  margin-top: 2px;
+  /*margin-top: 2px;*/
   margin-left: 2px;
+  /*border: 1px solid red;*/
 }
 
-/*Стилизация описания города в карточке*/
-.content__video-card-description {
+
+.content__video-card-description {/*Стилизация описания города в карточке*/
   display: flex;
   flex-direction: row;
-  max-height: 65px;
+  /*max-height: 65px;исправлено*/
   max-width: 200px;
   font-size: 18px;
   font-style: normal;
@@ -311,47 +330,49 @@ ol {
   line-height: 16.2px; /* 90% */
   margin-left: 2px;
   margin-top: 2px;
+  /*border: 1px solid red;*/
 }
 
-/* Форматирование видео в карточке*/
-.content__video-card-thumbnail {
+
+.content__video-card-thumbnail {/* Форматирование видео в карточке*/
   display: flex;
   height: 103px;
   width: 194px;
   align-items: center;
   object-fit: cover;
   object-position: center;
+  /*border: 1px solid red;*/
 }
-/* Кнопка показать еще */
-.more-button {
+
+.more-button {/* Кнопка показать еще */
   display: flex;
-  width: 399px;
-  height: 34px;
+  width: 394px;
+  /*height: 34px; свойство перенесено .button*/
   justify-content: center;
   align-items: center;
   gap: 10px;
-  flex-shrink: 0;
+  /*flex-shrink: 0; исправлено*/  
 }
-/* внесение измененений в проект */
-.content__card-link_current {
+
+.content__card-link_current {/* внесение измененений в проект */
   background-color: #545050;
 }
 /* -------------------------------------элементы в положении active */
-/* карточка с видео */
-.content__list-item:active {
+
+.content__list-item:active {/* карточка с видео */
   background-color: #545050;
 }
 
-/* кнопка найти */   
-.button:active {
+ 
+.button:active {/* кнопка найти */  
   background-color: #545050; 
 }
-  /* Поле ввода города */  
-.search-form__textfield:active {
+  
+.search-form__textfield:active {/* Поле ввода города */  
   border: none;
 }
-/* Поле ввода чекбокса */  
-.search-form__pseudo-checkbox:active::before {
+ 
+.search-form__pseudo-checkbox:active::before {/* Поле ввода чекбокса */ 
   display: flex;
   content: '';
   width: 13px;
@@ -360,8 +381,8 @@ ol {
 }
 
 /* -------------------------------------элементы в положении hover */
-.search-form__label-text:hover {
-  border-bottom: 1px solid #fff;
+.search-form__label:hover {
+  text-decoration: underline;
   cursor: pointer;
 }
 
@@ -369,14 +390,15 @@ ol {
   text-decoration: underline;
 }
 
-.content__video-card-title:hover {
-  border-bottom: 1px solid #fff;
+.content__card-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 .content__video-card-description:hover {
   border-bottom: 1px solid #fff;
 }
-/* -------------------------------------элементы в положении focus */    
+/* ------------------------------------элементы в положении focus */    
 
 .search-form__textfield:focus {
   outline: none;
@@ -392,7 +414,7 @@ ol {
   outline-offset: 1px;
 }
 
-/*focus-контейнер для карточек*/
+/*-----------------------------------focus-контейнер для карточек*/
 .content__card-link:focus {
   outline: none;
 }
