@@ -14,12 +14,12 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   box-sizing: border-box;
   width: 1200px;
-  
+
   padding-top: 140px;
   /*border: 1px solid red;*/
 }
@@ -53,16 +53,16 @@ ol {
   white-space: nowrap;
 }
 
-.content {/*----------общий контейнер */
+.content {
+  /*----------общий контейнер */
   display: flex;
   flex-direction: row;
-  /*height: 534px;*/ /* при удалении данного свойства высота блока становится равна высоте страницы*/ 
+  /*height: 534px;*/
   width: 1140px;
   margin-top: 133px;
   margin-left: 30px;
   gap: 30px;
   /*border: 1px solid #FFB02E;*/
-  
 }
 
 /*------------------------------------------------------------левый контейнер */
@@ -70,24 +70,24 @@ ol {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  /*height: 534px;исправлено*/ 
+  /*height: 534px;исправлено*/
   width: 711px;
   margin-top: 72px;
   /*border: 1px solid #FFB02E;*/
 }
 
-
-.result__video-container {/*контейнер для выбранного видео*/
+.result__video-container {
+  /*контейнер для выбранного видео*/
   position: relative;
   display: flex;
   height: 386px;
   width: 100%;
   margin-bottom: 16px;
   /*border: 1px solid white;*/
- }
+}
 
-
-.result__video { /*----------выбранное видео*/
+.result__video {
+  /*----------выбранное видео*/
   display: flex;
   height: 100%;
   width: 100%;
@@ -96,8 +96,8 @@ ol {
   /*border: 1px solid white;*/
 }
 
-
-.search-form {/*----------контейнер для ввода данных*/
+.search-form {
+  /*----------контейнер для ввода данных*/
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -107,19 +107,22 @@ ol {
   /*border: 1px solid white;*/
 }
 
-
-.search-form__fieldset {/*контейнер для выбора города и времени суток*/
+.search-form__fieldset {
+  /*контейнер для выбора города и времени суток*/
   display: flex;
- /* height: 54px; исправлено*/
+  /* height: 54px; исправлено*/
   width: 258px;
   flex-direction: column;
+  justify-content: start;
   border: none;
   margin-left: 3px;
   /*border: 1px solid white;*/
 }
 
-
-.search-form__fieldset-title {/*стилизация надписи город и время суток */
+.search-form__fieldset-title {
+  /*стилизация надписи город и время суток */
+  display: flex;
+  height: 22px;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -127,31 +130,36 @@ ol {
   /*border: 1px solid white;*/
 }
 
-
-.search-form__label {/*контейнер поля ввода города - невидимо */
+.search-form__label {
+  /*контейнер поля ввода города - невидимо */
   display: flex;
   flex-direction: row;
   /*height: 20px;исправлено*/
   width: 225px;
-  margin-top: 8px;
+  margin-top: 4px;
   justify-content: start;
-  font-family: Fira Sans Condensed;
+  /*font-family: Fira Sans Condensed;*/
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
-
-.search-form__checkbox-list {/* обертка чекбокса*/
+.search-form__checkbox-list {
+  /* обертка чекбокса*/
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 6px;
   /*height: 28px;исправлено*/
   width: 210px;
+  height: 24px;
   gap: 16px;
+  /*border: 1px solid white;*/
 }
 
-
-.search-form__pseudo-checkbox { /* новый чекбокс */
+.search-form__pseudo-checkbox {
+  /* новый чекбокс */
   display: flex;
   /*position: relative;*/
   justify-content: center;
@@ -161,13 +169,15 @@ ol {
   border: 1px solid #fff;
 }
 
-
-.search-form__label-text {/*стилизация надписей чекбокса*/
+.search-form__label-text {
+  /*стилизация надписей чекбокса*/
   margin-left: 3px;
 }
 
-
-.search-form__textfield {/* стилизация поля ввода города */
+.search-form__textfield {
+  /* стилизация поля ввода города */
+  display: flex;
+  align-items: start;
   background-color: transparent;
   height: 22px;
   width: 226px;
@@ -182,10 +192,11 @@ ol {
   appearance: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+  /* border: 1px solid white;*/
 }
 
-
-.button {/*----------общая стилизация кнопок*/
+.button {
+  /*----------общая стилизация кнопок*/
   cursor: pointer;
   color: #fff;
   text-align: center;
@@ -197,10 +208,10 @@ ol {
   background-color: transparent;
   border: 1px solid #fff;
   height: 34px;
-  }
-  
+}
 
-.search-form__submit-button {/*стилизация кнопки поиска*/
+.search-form__submit-button {
+  /*стилизация кнопки поиска*/
   display: flex;
   min-height: 34px; /* исправлено*/
   width: 194px;
@@ -213,14 +224,14 @@ ol {
 /*----------------------------------------правый контейнер------------------- */
 .content__details {
   display: flex;
-  height: 534px;
+  /*height: 534px; исправлено*/
   width: 399px;
   flex-direction: column;
   /*border: 1px solid red;*/
 }
 
-
-.title {/*----------стилизация заголовка страницы*/
+.title {
+  /*----------стилизация заголовка страницы*/
   font-family: Oswald;
   font-size: 75px;
   font-style: normal;
@@ -231,8 +242,8 @@ ol {
   /*border: 1px solid red;*/
 }
 
-
-.content__accent {/*стилизация первого слога заголовка*/
+.content__accent {
+  /*стилизация первого слога заголовка*/
   color: #545050;
   font-family: Oswald;
   font-size: 75px;
@@ -242,8 +253,8 @@ ol {
   text-transform: uppercase;
 }
 
-
-.content__list {/*----------контейнер каталога с видео*/
+.content__list {
+  /*----------контейнер каталога с видео*/
   position: relative;
   display: flex;
   height: 298px;
@@ -253,25 +264,24 @@ ol {
   /*border: 1px solid red;*/
 }
 
-
-.content__list-item:not(:last-child) {/*-отсупы между видеокарточками за исключением последней---*/
+.content__list-item:not(:last-child) {
+  /*-отсупы между видеокарточками за исключением последней---*/
   margin-bottom: 30px;
 }
 
-
-.content__list-item {/*----------контейнер для карточек*/
+.content__list-item {
+  /*----------контейнер для карточек*/
   display: flex;
   flex-direction: row;
   justify-content: start;
   height: 107px; /* нельзя убрать свойство - высота 107px больше нигде не задана , если убрать высота блока становится 103 px по размеру видеокарточки*/
   width: 394px;
-  /*border: 1px solid;*/
   /*border: 1px solid red;*/
 }
 
-
-.content__card-link {/*----------Стилизация ссылок*/
-  display:block;
+.content__card-link {
+  /*----------Стилизация ссылок*/
+  display: block;
   text-decoration: none;
   /*height: 107px;исправлено*/
   color: #fff;
@@ -282,8 +292,8 @@ ol {
   /*border: 1px solid red;*/
 }
 
-
-.content__video-card {/*Стилизация ссылок карточек с видео*/
+.content__video-card {
+  /*Стилизация ссылок карточек с видео*/
   display: flex;
   /*height: 107px;*/
   flex-direction: row;
@@ -291,19 +301,18 @@ ol {
   /*border: 1px solid red;*/
 }
 
-
-.content__video-card-description-container {/*Контейнер для ссылок и наименования  города в карточке*/
+.content__video-card-description-container {
+  /*Контейнер для ссылок и наименования  города в карточке*/
   display: flex;
   flex-direction: column;
   align-items: start;
   height: 103px;
   width: 200px;
-  /*gap: 6px;*/
   /*border: 1px solid red;*/
 }
 
-
-.content__video-card-title {/*Стилизация Наименования города в карточке*/
+.content__video-card-title {
+  /*Стилизация Наименования города в карточке*/
   display: flex;
   /*height: 30px;исправлено*/
   max-width: 200px;
@@ -313,13 +322,12 @@ ol {
   font-weight: 700;
   line-height: 100%; /* 30px */
   text-transform: uppercase;
-  /*margin-top: 2px;*/
   margin-left: 2px;
   /*border: 1px solid red;*/
 }
 
-
-.content__video-card-description {/*Стилизация описания города в карточке*/
+.content__video-card-description {
+  /*Стилизация описания города в карточке*/
   display: flex;
   flex-direction: row;
   /*max-height: 65px;исправлено*/
@@ -333,8 +341,8 @@ ol {
   /*border: 1px solid red;*/
 }
 
-
-.content__video-card-thumbnail {/* Форматирование видео в карточке*/
+.content__video-card-thumbnail {
+  /* Форматирование видео в карточке*/
   display: flex;
   height: 103px;
   width: 194px;
@@ -344,40 +352,44 @@ ol {
   /*border: 1px solid red;*/
 }
 
-.more-button {/* Кнопка показать еще */
+.more-button {
+  /* Кнопка показать еще */
   display: flex;
   width: 394px;
   /*height: 34px; свойство перенесено .button*/
   justify-content: center;
   align-items: center;
   gap: 10px;
-  /*flex-shrink: 0; исправлено*/  
+  /*flex-shrink: 0; исправлено*/
 }
 
-.content__card-link_current {/* внесение измененений в проект */
+.content__card-link_current {
+  /* внесение измененений в проект */
   background-color: #545050;
 }
 /* -------------------------------------элементы в положении active */
 
-.content__list-item:active {/* карточка с видео */
+.content__list-item:active {
+  /* карточка с видео */
   background-color: #545050;
 }
 
- 
-.button:active {/* кнопка найти */  
-  background-color: #545050; 
+.button:active {
+  /* кнопка найти */
+  background-color: #545050;
 }
-  
-.search-form__textfield:active {/* Поле ввода города */  
+
+.search-form__textfield:active {
+  /* Поле ввода города */
   border: none;
 }
- 
-.search-form__pseudo-checkbox:active::before {/* Поле ввода чекбокса */ 
-  display: flex;
-  content: '';
-  width: 13px;
-  height: 13px;
+
+input[type="checkbox"]:checked ~ .search-form__pseudo-checkbox::before {
+  /*поля ввода в чекбоксах*/
+  content: "";
   background-color: #fff;
+  min-inline-size: 15px;
+  min-block-size: 15px;
 }
 
 /* -------------------------------------элементы в положении hover */
@@ -386,7 +398,7 @@ ol {
   cursor: pointer;
 }
 
-.search-form__submit-button:hover {
+.button:hover {
   text-decoration: underline;
 }
 
@@ -398,7 +410,7 @@ ol {
 .content__video-card-description:hover {
   border-bottom: 1px solid #fff;
 }
-/* ------------------------------------элементы в положении focus */    
+/* ------------------------------------элементы в положении focus */
 
 .search-form__textfield:focus {
   outline: none;
@@ -409,9 +421,14 @@ ol {
   outline-offset: 1px;
 }
 
-.search-form__submit-button:focus-visible {
+/*.search-form__submit-button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
+}*/
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: -3px;
 }
 
 /*-----------------------------------focus-контейнер для карточек*/
@@ -420,5 +437,5 @@ ol {
 }
 
 .content__card-link:focus-visible {
-  outline: 1px solid #FFF;
+  outline: 1px solid #fff;
 }
